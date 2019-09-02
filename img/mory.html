@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Этот сайт посвящен милейшему котаняну по имени Мориарти.">
+  <title>Котик Мориарти</title>
+  <link rel="shortcut icon" href="img/FS2_K3Mu8Ko.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="mory.css">
+</head>
+<body>
+  <header>
+  <h1>Moriarty The Cat</h1>
+  </header>
+  <main>
+    <nav>
+      <h2>Что я люблю?</h2>
+      <ul>
+        <li><a href="#IMT">Идеальный вес</a></li>
+        <li><a href="#product">Калорийность</a></li>
+        <li><a href="#eat">Скока можно кушац?</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p>Дратути!</p>
+      <p>Этот сайт принадлежит потрясающему котику по имени Мориарти. Он создан для контроля вашей идеальной фигуры. Вы можете узнать здесь свой индекс массы тела, идеальный вес, рассчитать количество калорий, которые можно съедать в сутки. Не злитесь, если что-то будет работать не с первого раза, я не программист, я только учусь.</p>
+    </div>
+    <div class="formula">
+      <form class="row" id="IMT">
+        <div class="col-1">Индекс массы тела (ИМТ)
+        </div>
+        <div class="col-2">
+          <div>
+            <div>
+              <label> вес (кг) </label>
+              <input type="number" name="weight" required min="0" max="200">
+            </div>
+            <div>
+              <label> рост (см) </label>
+              <input type="number" name="growth" required min="1" max="300" step="0.1">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <label>
+            <span id="answer"></span>
+          </label>
+          <div>
+            <button> Ответ </button>
+          </div>
+        </div>
+      </form>
+
+
+
+
+      <!-- start -->
+      <form class="row"  id="IMTIdeal">
+        <div class="col-1">Идеальный вес по формуле Дивайна</div>
+        <div class="col-2">
+          <div> Пол 
+              <select name="gender">
+                <option value="0" selected>Женщина</option>
+                <option value="1">Мужчина</option>
+                <option value="2">Котик</option>
+              </select>
+              <div>
+                <label> рост (см) </label>
+                <input type="number" name="growth" required min="1" max="300" step="0.1">
+              </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div>
+            <label>
+              <span id="answer"></span>
+            </label>
+            <div>
+              <button> Ответ </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- end -->
+
+
+
+
+    </div>
+    <div class="formula">
+      <form class="row" id="product">
+        <div class="col-1">Калорийность блюд</div>
+        <div class="col-2">
+          <div> Название блюда
+            <select name="calories">
+              <option value="343">Гречка</option>
+              <option value="344">Рис</option>
+              <option value="159">Творог 9%</option>
+            </select>
+            <div>
+              <label> вес (гр) </label>
+              <input type="number" name="gramm" required min="1" max="999">
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+           <div>
+            <label>
+              <span id="answer"></span>
+            </label>
+            <div>
+              <button> Ответ </button>
+            </div>
+          </div>
+        </div>
+      </form> 
+      <form class="row"  id="maxcal">
+        <div class="col-1">Максимальное количество калорий</div>
+        <div class="col-2">
+          <div> 
+              <label> Пол </label> 
+              <select name="gender">
+                <option value="0" selected>Женщина</option>
+                <option value="1">Мужчина</option>
+                <option value="2">Котик</option>
+              </select>
+              <div>
+                <label> рост (см) </label>
+                <input type="number" name="growth" required min="1" max="300" step="0.1" value="170">
+              </div>
+              <div>
+                <label> вес (кг) </label>
+                <input type="number" name="weight" required min="0" max="200" value="65">
+              </div>
+              <div>
+                <label> возраст </label>
+                <input type="number" name="age" required min="1" max="120" value="26">
+              </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div>
+            <label>
+              <span id="answer"></span>
+            </label>
+            <div>
+              <button> Ответ </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- start -->
+    <div class="formula"> 
+      <h2>Скока можно кушац?</h2>
+      <form class="row" id="eat">
+        <div class="col-2" style="width: 70%">
+          <div> Скушано сегодня
+            <select name="calories">
+              <option value="343">Гречка</option>
+              <option value="344">Рис</option>
+              <option value="159">Творог 9%</option>
+            </select>
+            <div class="inline-block">
+              <label> вес (гр) </label>
+              <input type="number" name="gramm" required min="1" max="999">
+            </div>
+            <div class="inline-block">
+              <button class="js-plus"> + </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+           <div>
+            <label>
+              <span id="answer"></span>
+            </label>
+            <div>
+              <button> Ответ </button>
+            </div>
+          </div>
+        </div>
+      </form> 
+    </div>
+<!-- end -->
+
+  </main>
+  <footer>Нижняя шапочка</footer>
+<script type="text/javascript" src="mory.js"></script>
+</body>
+</html>
